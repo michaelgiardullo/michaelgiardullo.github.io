@@ -22,9 +22,9 @@ Then open `http://localhost:8000`.
 
 ## Publish with GitHub Pages
 
-Create a public repository named `mcgjpn.github.io`, put these files in the repository root, and enable GitHub Pages from the repository settings if it is not enabled automatically.
+Create a public repository named `michaelgiardullo.github.io`, put these files in the repository root, and enable GitHub Pages from the repository settings if it is not enabled automatically.
 
-The site will be available at `https://mcgjpn.github.io/` before a custom domain is connected.
+The site will be available at `https://michaelgiardullo.github.io/` before a custom domain is connected.
 
 ## Easy edits
 

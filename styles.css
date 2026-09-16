@@ -16,6 +16,7 @@
 html { scroll-behavior: smooth; }
 body {
   margin: 0;
+  overflow-x: clip;
   background: #fff;
   color: var(--ink);
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -91,6 +92,9 @@ button, input, textarea, select { font: inherit; }
 }
 .nav-links a,
 .nav-external a {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
   text-decoration: none;
   font-size: 0.74rem;
   font-weight: 760;
@@ -455,6 +459,10 @@ p { color: var(--muted); line-height: 1.7; }
 }
 
 @media (max-width: 760px) {
+  :root {
+    --page-pad: clamp(18px, 5.5vw, 28px);
+    --section-space: clamp(70px, 18vw, 96px);
+  }
   .site-nav { min-height: 66px; padding-block: 10px; }
   .brand-name { display: none; }
   .nav-external a:first-child { display: none; }
@@ -462,7 +470,13 @@ p { color: var(--muted); line-height: 1.7; }
   .hero-copy { order: 1; }
   .identity-panel { order: 2; max-width: 360px; }
   .portrait-wrap { aspect-ratio: 1 / 1.08; }
-  h1 { font-size: clamp(3.65rem, 16vw, 5.8rem); }
+  h1 {
+    font-size: clamp(3rem, 14.5vw, 5.8rem);
+    line-height: 0.94;
+    letter-spacing: -0.052em;
+  }
+  h2 { font-size: clamp(2.45rem, 12vw, 4.2rem); }
+  .hero-lede { font-size: 1.02rem; }
   .intro-band-grid,
   .section-heading,
   .about-grid { grid-template-columns: 1fr; }
@@ -471,24 +485,69 @@ p { color: var(--muted); line-height: 1.7; }
   .project-grid,
   .capability-grid { grid-template-columns: 1fr; }
   .project-grid { gap: 72px; }
+  .project-copy { padding-block: 10px; }
+  .project-summary { font-size: 0.96rem; }
+  .tag-row { margin-bottom: 24px; }
   .project-visual { min-height: 340px; }
   .court-visual { min-height: 390px; }
   .commerce-visual, .bi-visual { min-height: 340px; }
   .bi-chart { height: 145px; }
   .footer-grid { grid-template-columns: 1fr; align-items: start; }
   .footer-copy { text-align: left; }
+  .footer-links a { min-height: 44px; display: inline-flex; align-items: center; }
 }
 
 @media (max-width: 480px) {
-  .nav-external { gap: 16px; }
-  .nav-external a { font-size: 0.68rem; }
+  .site-nav { gap: 14px; }
+  .brand-mark { width: 36px; height: 36px; }
+  .nav-external { gap: 10px; }
+  .nav-external a { font-size: 0.66rem; }
+
+  .hero { padding-block: 58px 70px; gap: 44px; }
+  h1 { font-size: clamp(2.75rem, 14vw, 4.2rem); }
+  .eyebrow { font-size: 0.66rem; letter-spacing: 0.12em; }
   .hero-actions .button,
   .about-links .button { width: 100%; }
   .identity-panel { max-width: none; }
-  .court-visual { min-height: 330px; }
-  .commerce-visual { padding: 14px; }
-  .commerce-main { padding-left: 18px; }
-  .bi-visual { padding: 18px; }
-  .bi-chart { left: 18px; right: 18px; bottom: 22px; }
-  .capability { min-height: 260px; }
+
+  .intro-band { padding-block: 56px; }
+  .intro-statement { font-size: clamp(1.35rem, 7.2vw, 1.8rem); }
+  .section-heading { gap: 18px; }
+  .section-note { font-size: 0.86rem; }
+
+  .project-featured { margin-bottom: 76px; }
+  .project-grid { gap: 64px; }
+  .project-visual { min-height: 300px; }
+  .court-visual { min-height: 310px; }
+  .visual-caption { left: 14px; bottom: 13px; font-size: 0.54rem; }
+
+  .commerce-visual { min-height: 300px; padding: 12px; }
+  .browser-bar { height: 38px; }
+  .commerce-layout { grid-template-columns: 0.72fr 1.8fr; min-height: 240px; }
+  .commerce-sidebar { padding-top: 20px; gap: 14px; }
+  .commerce-sidebar span { font-size: 0.52rem; letter-spacing: 0.08em; }
+  .commerce-main { padding: 24px 0 0 14px; }
+  .commerce-cards { gap: 7px; margin-top: 30px; }
+
+  .bi-visual { min-height: 310px; padding: 16px; }
+  .bi-kpis { gap: 6px; }
+  .bi-kpis div { padding: 10px 8px; }
+  .bi-kpis small { font-size: 0.48rem; }
+  .bi-kpis strong { font-size: 0.96rem; }
+  .bi-chart { left: 16px; right: 16px; bottom: 18px; height: 132px; gap: 7px; }
+
+  .capability { min-height: 240px; padding: 26px 22px; }
+  .capability-list { margin-top: 24px; }
+  .about-links { margin-top: 28px; }
+  .site-footer { padding-block: 38px; }
+}
+
+
+@media (max-width: 360px) {
+  .site-nav { padding-inline: 16px; }
+  .nav-external a { font-size: 0.62rem; letter-spacing: 0.05em; }
+  h1 { font-size: 2.65rem; }
+  .button { padding-inline: 18px; }
+  .tag-row span { font-size: 0.62rem; }
+  .bi-kpis strong { font-size: 0.88rem; }
 }
