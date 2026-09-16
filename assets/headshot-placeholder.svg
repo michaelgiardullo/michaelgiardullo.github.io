@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000">
+  <rect width="800" height="1000" fill="#f3f3f3"/>
+  <circle cx="400" cy="360" r="150" fill="#d8d8d8"/>
+  <path d="M170 905c22-217 115-325 230-325s208 108 230 325" fill="#d8d8d8"/>
+  <text x="400" y="955" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="34" font-weight="700" letter-spacing="8" fill="#777">MCG</text>
+</svg>
